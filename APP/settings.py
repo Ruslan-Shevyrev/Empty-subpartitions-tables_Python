@@ -61,7 +61,7 @@ VAULT_CERT_PATH = get_os_variable('VAULT_CERT_PATH')
 LOKI_URL = get_os_variable('LOKI_URL')
 LOKI_JOB_NAME = get_os_variable('LOKI_JOB_NAME')
 
-vault = val.Vault("kafka-tables-insert-consumer",
+vault = val.Vault("kafka-empty-subpartitions-consumer",
                   VAULT_CERT_PATH,
                   VAULT_URL,
                   LOKI_URL)

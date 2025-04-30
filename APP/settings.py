@@ -68,18 +68,18 @@ vault = val.Vault("kafka-tables-insert-consumer",
 
 APEX_USER = get_vault_variable(vault,
                                'db_login',
-                               '',
+                               'apex-db/microservices',
                                'APEX_USER')
 
 APEX_PASSWORD = get_vault_variable(vault,
                                    'db_password',
-                                   '',
+                                   'apex-db/microservices',
                                    'APEX_PASSWORD')
 
 APEX_DSN = get_os_variable('APEX_DSN', 'APEX_DSN')
 
 KAFKA_BOOTSTRAP_SERVER = get_os_variable('KAFKA_BOOTSTRAP_SERVER', 'KAFKA_BOOTSTRAP_SERVER')
 
-TOPICS = ['TABLES_WITH_INSERTS_ONLY']
+TOPICS = ['EMPTY_SUBPARTITIONS_TABLES']
 
-GROUP_ID = 'TABLES_WITH_INSERTS_ONLY_CONSUMER'
+GROUP_ID = 'EMPTY_SUBPARTITIONS_TABLES_CONSUMER'
